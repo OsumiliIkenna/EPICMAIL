@@ -13,6 +13,48 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.container {
+    padding: 1rem 4rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.app .container-header {
+	z-index: 1;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    text-transform: uppercase;
+    line-height: 3rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.13rem;
+    background: #271c5d;
+    border-bottom: 0.25rem solid #64a5b7;
+    border-radius: 5px;
+}
+
+.container-header span.title {
+	position: absolute;
+    width: 100%;
+    display: inline-block;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 2px;
+    color: #fff;
+}
+
+.form-wrap {
+	margin: auto;
+    background: #271c5d;
+    color: #fff;
+    padding: 1rem 3rem 3rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .8);
+    border-radius: 10px;
+}
+
 .login-container,
 .signup-container {
 	background: #271c5d;
@@ -42,7 +84,8 @@ label {
 }
 
 .login-container input,
-.signup-container input {
+.signup-container input,
+.form-wrap input {
 	width: 100%;
 	margin-bottom: 0.63rem;
 	height: 30px;
@@ -52,6 +95,10 @@ label {
 	outline: none;
 	color: #fff;
 	font-size: 0.88rem;
+}
+
+#message {
+	margin-top: 0.65rem;
 }
 
 #btn {
@@ -74,6 +121,14 @@ label {
 	background-color: #FFA500;
 }
 
+.form-wrap #btn {
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+
 .login-container a {
 	text-decoration: none;
     font-size: 0.75rem;
@@ -87,24 +142,49 @@ label {
 	color: #FFA500;
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
-  .login-container {
-    width: 80%;
-  }
-
-  .signup-container {
-    width: 90%;
-  }
+.input-box {
+    padding: 0.5rem;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 1.2rem;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-  .login-container {
-    width: 80%;
-  }
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 55%;
+    	height: 55%;
+	}
+}
 
-  .signup-container {
-    width: 90%;
-  }
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  	.login-container {
+    	width: 80%;
+  	}
+
+  	.signup-container {
+    	width: 90%;
+  	}
+
+  	.container {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  	.login-container {
+	    width: 80%;
+  	}
+
+  	.signup-container {
+    	width: 90%;
+  	}
+
+  	.container {
+        padding: 1rem;
+    }
+    .form-wrap {
+        padding: 1rem 2rem 2rem;
+    }
 }
  
 
