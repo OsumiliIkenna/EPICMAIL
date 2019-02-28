@@ -13,7 +13,8 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.login-container {
+.login-container,
+.signup-container {
 	background: #271c5d;
     color: #fff;
     top: 50%;
@@ -21,14 +22,15 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     box-sizing: border-box;
-    padding: 20px 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .8);
+    padding: 1.25rem 1.88rem;
+    box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, .8);
     border-radius: 5px;
 }
 
-.login-container h1 {
-	margin: 10px 0px 10px 0px;
-    padding-bottom: 10px;
+.login-container h1,
+.signup-container h1 {
+	margin: 0.63rem 0rem 0.63rem 0rem;
+    padding-bottom: 0.63rem;
     text-align: center;
     font-size: 1.75rem;
 }
@@ -39,9 +41,10 @@ label {
 	margin-bottom: 0.5rem;
 }
 
-.login-container input {
+.login-container input,
+.signup-container input {
 	width: 100%;
-	margin-bottom: 10px;
+	margin-bottom: 0.63rem;
 	height: 30px;
 	border: none;
 	border-bottom: 1px solid #fff;
@@ -62,7 +65,7 @@ label {
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    margin: 1.1rem 0px 1.1rem;
+    margin: 1.1rem 0rem 1.1rem;
 }
 
 #btn:hover {
@@ -88,11 +91,19 @@ label {
   .login-container {
     width: 80%;
   }
+
+  .signup-container {
+    width: 90%;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
   .login-container {
     width: 80%;
+  }
+
+  .signup-container {
+    width: 90%;
   }
 }
  
