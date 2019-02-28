@@ -30,7 +30,7 @@ body {
 	margin: 10px 0px 10px 0px;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 28px;
+    font-size: 1.75rem;
 }
 
 label {
@@ -48,7 +48,7 @@ label {
 	background: transparent;
 	outline: none;
 	color: #fff;
-	font-size: 14px;
+	font-size: 0.88rem;
 }
 
 #btn {
@@ -58,11 +58,11 @@ label {
     outline: none;
     height: 30px;
     color: #271c5d;
-    font-size: 16px;
+    font-size: 1rem;
     border-radius: 20px;
     font-weight: bold;
     cursor: pointer;
-    margin: 15px 0px 15px;
+    margin: 1.1rem 0px 1.1rem;
 }
 
 #btn:hover {
@@ -73,16 +73,31 @@ label {
 
 .login-container a {
 	text-decoration: none;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
     color: darkgray;
-    margin: 15px 0 0;
+    margin: 1.1rem 0 0;
 	text-decoration: none;
 }
 
 .login-container a:hover {
 	color: #FFA500;
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .login-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .login-container {
+    width: 80%;
+  }
+}
+ 
+
+
 
 
 
