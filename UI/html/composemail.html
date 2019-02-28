@@ -10,7 +10,39 @@
 </head>
 <body>
     <section class="container">
-		
+        <div class="app">
+            <div class="container-header">
+                <span class="title">Message</span>
+            </div>
+            <div class="form-wrap">
+                <form>
+                    <div class="input-group">
+                        <label for="from-input">form
+                            <input type="email" name="from-input" id="from-input" class="input-box" placeholder="Your email"
+                                required>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="to-input">To
+                            <input type="email" name="to-input" id="to-input" class="input-box" placeholder="Recipient email"
+                                required>
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="subject">Subject
+                            <input type="text" name="subject" id="subject" class="input-box" placeholder="Enter mail title">
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message
+                            <textarea name="message" id="message" class="input-box" placeholder="Detail of the message"
+                                rows="10" required></textarea>
+                        </label>
+                    </div>
+                    <button class="btn-send btn-reverse">Send Mail</button>
+                </form>
+            </div>
+        </div>
     </section>
 </body>
 </html>
