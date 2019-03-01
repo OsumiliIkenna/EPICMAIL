@@ -13,18 +13,25 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-.container {
+.container,
+.container-mail {
     padding: 1rem 4rem;
     margin: auto;
     overflow: hidden;
 }
+
+.container-mail {
+    transform: translate(0%, 0%);
+    padding: 1rem;
+}
+
 
 .app .container-header {
 	z-index: 1;
     position: relative;
     display: block;
     width: 100%;
-    height: 50px;
+    height: 3.12rem;
     text-transform: uppercase;
     line-height: 3rem;
     text-align: center;
@@ -46,13 +53,118 @@ body {
     color: #fff;
 }
 
+.mail-container {
+    margin-left: 21%;
+    padding: 1px 1px;
+    height: 62.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+li a.active {
+    background-color: #999;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+li a.compose {
+    height: 2.2rem;
+    background-color: #271c5d;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 40%;
+    border-radius: 20px;
+    margin: 0.5rem 0 0.5rem 0.3rem;
+    border-bottom: 1.2rem;
+    text-align: center;
+}
+
+input[name=search] {
+    display: block;
+    float: right;
+    width: 35%;
+    margin-bottom: 0.63rem;
+    padding: 0.31rem 0.63rem;
+    background: #EEE;
+    font: 0.88rem Tahoma, Geneva, sans-serif;
+    border-radius: 5px;
+}
+
+input[name=search]:focus {
+    outline: none;
+}
+
+.message {
+    clear: both;
+    margin-bottom: 0.31rem;
+    position: relative;
+    padding: 0.31rem;
+    background: #bbd0e4;
+    border-radius: 0.31rem;
+}
+
+.message:hover {
+	background: #669999;
+	cursor: pointer;
+}
+
+.message input {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.63rem;
+    width: 1.88rem;
+}
+
+.message .sender {
+    display: block;
+    position: absolute;
+    left: 2.5rem;
+    color: #000;
+    font-weight: bold;
+    width: 5.63rem;
+}
+
+.message .title {
+    display: inline-block;
+    padding-left: 9.4rem;
+    width: 100%;
+}
+
+.message .date {
+    position: absolute;
+    right: 0.63rem;
+}
 .form-wrap {
 	margin: auto;
     background: #271c5d;
     color: #fff;
     padding: 1rem 3rem 3rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .8);
-    border-radius: 10px;
+    box-shadow: 0 0.63rem 1.25rem rgba(0, 0, 0, .8);
+    border-radius: 0.63rem;
 }
 
 .login-container,
@@ -158,7 +270,7 @@ label {
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
   	.login-container {
-    	width: 80%;
+    	width: 85%;
   	}
 
   	.signup-container {
@@ -168,6 +280,35 @@ label {
   	.container {
         padding: 1rem 2rem;
     }
+
+       .mail-container {
+	    margin-left: 28%;
+	}
+
+	.message{
+		height: 3%;
+	}
+
+	ul {
+	    width: 25%;
+	}
+
+	.message .sender {
+	    width: 2.63rem;
+	    left: 2.5rem;
+	}
+
+	.message .title {
+	    width: 100%;
+	    padding-left: 6.4rem;
+	}
+
+	.message .date {
+	    right: 0.13rem;
+	}
+	li a.compose {
+		width: 90%;
+	}
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -185,6 +326,35 @@ label {
     .form-wrap {
         padding: 1rem 2rem 2rem;
     }
+    .mail-container {
+	    margin-left: 28%;
+	}
+
+	.message{
+		height: 3%;
+	}
+
+	ul {
+	    width: 25%;
+	}
+
+	.message .sender {
+	    width: 2.63rem;
+	    left: 2.5rem;
+	}
+
+	.message .title {
+	    width: 100%;
+	    padding-left: 5.4rem;
+	}
+
+	.message .date {
+	    right: 0.13rem;
+	}
+
+	li a.compose {
+		width: 90%;
+	}
 }
  
 
