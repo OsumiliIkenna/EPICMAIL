@@ -209,11 +209,13 @@ label {
 	font-size: 0.88rem;
 }
 
-#message {
+#message, 
+#group-emails {
 	margin-top: 0.65rem;
 }
 
-#btn {
+#btn, 
+#btn-group {
 	width: 100%;
 	border: none;
     background: #bbd0e4;
@@ -227,13 +229,14 @@ label {
     margin: 1.1rem 0rem 1.1rem;
 }
 
-#btn:hover {
+#btn:hover, #btn-group:hover {
 	cursor: pointer;
 	color: #000;
 	background-color: #FFA500;
 }
 
-.form-wrap #btn {
+.form-wrap #btn,
+.form-wrap #btn-group {
     margin-top: 1rem;
     display: block;
     width: 100%;
