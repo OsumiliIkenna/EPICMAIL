@@ -9,21 +9,23 @@
     <title>EPICMAIL</title>
 </head>
 <body>
-    <section>
-    	<div class="login-container">
-    		<h1>Login</h1>
-    		<form action="" class="login-form">
-    			<label for="username">Username:
-                    <input id="username" type="text" placeholder="user Name"/>
-                </label>
-                <label for="pwd">Password:
-                    <input id="pwd" type="password" placeholder="password"/>
-                </label>
-                <button id="btn">Login</button>
-                <a href="#">Reset password?</a><br><br>
-                <p>Don't have account? <a href="signup.html">Sign Up</a></p>
-    		</form>
-    	</div>
-    </section>
+	<main role="main" class="main">
+	    <section>
+	    	<div class="login-container">
+	    		<h1 tabindex="0">Login</h1>
+	    		<form action="" class="login-form">
+	    			<label for="username">Username:
+	                    <input id="username" type="text" placeholder="user Name" tabindex="0" />
+	                </label>
+	                <label for="pwd">Password:
+	                    <input id="pwd" type="password" placeholder="password" tabindex="0" />
+	                </label>
+	                <button id="btn" type="submit" tabindex="0">Login</button>
+	                <a href="resetPassword.html">Reset password?</a><br><br>
+	                <p>Don't have account? <a href="signup.html">Sign Up</a></p>
+	    		</form>
+	    	</div>
+	    </section>
+	</main>
 </body>
 </html>
