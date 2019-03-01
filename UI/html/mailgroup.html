@@ -9,29 +9,31 @@
     <title>EPICMAIL</title>
 </head>
 <body>
-    <section class="container">
-        <div class="app">
-            <div class="container-header">
-                <span class="title">Mailing Group</span>
+    <main role="main" class="main">
+        <section class="container">
+            <div class="app">
+                <div class="container-header">
+                    <span class="title">Mailing Group</span>
+                </div>
+                <div class="form-wrap">
+                    <form>
+                        <div class="input-group">
+                            <label for="group-name">Group Name:
+                                <input type="text" name="group-name" id="group-name" class="input-box" placeholder="Enter group name">
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="group-emails">Group Emails ID:
+                                <textarea name="group-emails" id="group-emails" class="input-box" placeholder="Enter group emails"
+                                    rows="10" required></textarea>
+                            </label>
+                        </div>
+                        <button id="btn">Create Group</button>
+                        <button id="btn-group">Add Group</button>  
+                    </form>
+                </div>
             </div>
-            <div class="form-wrap">
-                <form>
-                    <div class="input-group">
-                        <label for="group-name">Group Name:
-                            <input type="text" name="group-name" id="group-name" class="input-box" placeholder="Enter mail title">
-                        </label>
-                    </div>
-                    <div class="input-group">
-                        <label for="group-emails">Group Emails ID:
-                            <textarea name="group-emails" id="group-emails" class="input-box" placeholder="Enter group emails"
-                                rows="10" required></textarea>
-                        </label>
-                    </div>
-                    <button id="btn">Create Group</button>
-                    <button id="btn-group">Add Group</button>  
-                </form>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
