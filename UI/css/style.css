@@ -14,6 +14,7 @@ body {
 }
 
 .container,
+.container-addUser,
 .container-mail {
     padding: 1rem 4rem;
     margin: auto;
@@ -27,8 +28,6 @@ body {
 
 
 .app .container-header {
-	z-index: 1;
-    position: relative;
     display: block;
     width: 100%;
     height: 3.12rem;
@@ -40,6 +39,11 @@ body {
     background: #271c5d;
     border-bottom: 0.25rem solid #64a5b7;
     border-radius: 5px;
+}
+
+.container-addUser {
+    max-width: 60%;
+    margin-top: 100px;
 }
 
 .container-header span.title {
@@ -281,7 +285,8 @@ label {
     	width: 90%;
   	}
 
-  	.container {
+  	.container, 
+    .container-addUser {
         padding: 1rem 2rem;
     }
 
@@ -324,7 +329,8 @@ label {
     	width: 90%;
   	}
 
-  	.container {
+  	.container,
+    .container-addUser {
         padding: 1rem;
     }
     .form-wrap {
