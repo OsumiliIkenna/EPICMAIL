@@ -11,26 +11,43 @@ body {
     background: #f4f4f4;
     background-position: center;
     font-family: 'Lato', sans-serif;
+    overflow: hidden;
 }
 
 .container,
 .container-addUser,
 .container-mail {
-    padding: 1rem 4rem;
+    padding: 1rem 4rem; 
     margin: auto;
     overflow: hidden;
+    margin-top: 150px; 
 }
 
-.container-mail {
+/* .container-mail {
     transform: translate(0%, 0%);
     padding: 1rem;
-}
+    margin-top: 150px;
+}  */
 
+.container-header {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 50px 10px;
+    /* transition: 0.4s; */
+    position: fixed;
+    width: 100%;
+    /* color: rgba(255, 255, 255, 0.6); */
+    top: 0;
+    letter-spacing: 0.13rem;
+    /* background: #271c5d; */
+    border-bottom: 0.25rem solid #64a5b7;
+    border-radius: 5px;
+}
 
 .app .container-header {
     display: block;
     width: 100%;
-    height: 3.12rem;
+    height: 3.12rem; 
     text-transform: uppercase;
     line-height: 3rem;
     text-align: center;
@@ -41,26 +58,33 @@ body {
     border-radius: 5px;
 }
 
+.container-mail.app {
+    position: relative;
+} 
+
 .container-addUser {
     max-width: 60%;
     margin-top: 100px;
 }
 
 .container-header span.title {
-	position: absolute;
-    width: 100%;
-    display: inline-block;
-    left: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 2px;
-    color: #fff;
+	float: left;
+    color: #271c5d;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
 }
 
 .mail-container {
+    position: absolute;
+    max-height: 100%;
+    width: 75%;
+    overflow: auto;
     margin-left: 21%;
-    padding: 1px 1px;
-    height: 62.5rem;
+    padding: 1px 25px;
+    left: 10px;
 }
 
 ul {
