@@ -25,20 +25,18 @@ body {
     padding: 1rem 4rem; 
     margin: auto;
     overflow: hidden;
-    margin-top: 150px; 
+    margin-top: 90px; 
 }
 
 .container-header {
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.6);
-    padding: 50px 10px;
-    /* transition: 0.4s; */
+    padding: 20px 10px;
     position: fixed;
     width: 100%;
-    /* color: rgba(255, 255, 255, 0.6); */
+    /* height: 15vh; */
     top: 0;
     letter-spacing: 0.13rem;
-    /* background: #271c5d; */
     border-bottom: 0.25rem solid #64a5b7;
     border-radius: 5px;
 }
