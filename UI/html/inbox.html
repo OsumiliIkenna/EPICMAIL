@@ -15,11 +15,10 @@
     </div>
     <div class="navBar">
         <ul>
-            <li><a class="compose" href="composemail.html" tabindex="0" role="compose" aria-labelledby="Compose">Compose</a></li>
+            <li><a class="compose" href="#composemail.html" tabindex="0" role="compose" aria-labelledby="Compose">Compose</a></li>
             <li>
                 <a class="active" id="inbox" href="#inbox" tabindex="0" role="button">Inbox</a>
             </li>
-            <li><a href="#starred" id="starred" tabindex="0" role="button">Starred</a></li>
             <li><a href="#sent-mail" id="sent" tabindex="0" role="button">Sent</a></li>
             <li><a href="#draft" id="draft" tabindex="0" role="button">Draft</a></li>
             <li><a href="#trash" id="trash" tabindex="0" role="button">Trash</a></li>
@@ -299,6 +298,64 @@
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
                     <span class="title" >trash mail 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="compose-mail-container" id="compose-mail" hidden>
+        <div class="app">
+            <div class="mail-container">
+                <div class="form-wrap">
+                    <span class="close" aria-label="Close Button" tabindex="0">&times;</span>
+                    <form>
+                        <div class="input-group">
+                            <label for="from-input">from
+                                <input type="email" name="from-input" id="from-input" class="input-box" placeholder="Your email"
+                                    required>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="to-input">To
+                                <input type="email" name="to-input" id="to-input" class="input-box" placeholder="Recipient email"
+                                    required>
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject
+                                <input type="text" name="subject" id="subject" class="input-box" placeholder="Enter mail title">
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Message
+                                <textarea name="message" id="message" class="input-box" placeholder="Detail of the message"
+                                    rows="10" required></textarea>
+                            </label>
+                        </div>
+                        <button id="btn">Send Mail</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="group-mail-container" id="group-mail" hidden>
+        <div class="app">
+            <div class="mail-container">
+                <div class="form-wrap">
+                    <form>
+                        <div class="input-group">
+                            <label for="group-name" tabindex="0">Group Name:
+                                <input type="text" name="group-name" id="group-name" class="input-box" placeholder="Enter group name" tabindex="0">
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <label for="group-emails" tabindex="0">Group Emails ID:
+                                <textarea name="group-emails" id="group-emails" class="input-box" placeholder="Enter group emails"
+                                    rows="10" tabindex="0" required></textarea>
+                            </label>
+                        </div>
+                        <button id="btn" type="submit" tabindex="0">Create Group</button>
+                        <button id="btn-group" type="submit" tabindex="0">Add Group</button>
+                    </form>
                 </div>
             </div>
         </div>

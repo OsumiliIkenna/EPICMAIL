@@ -2,19 +2,24 @@ let inbox = document.querySelector('.container-mail'),
         sentMail = document.querySelector('.sent-mail-container'),
         draftMail = document.querySelector('.draft-mail-container'),
         trashMail = document.querySelector('.trash-mail-container'),
+        composeMail = document.querySelector('.compose-mail-container'),
+        groupMail = document.querySelector('.group-mail-container'),
 		sentMailEventBtn = document.querySelector('#sent'),
         draftMailEventBtn = document.querySelector('#draft'),
 		inboxEventBtn = document.querySelector('#inbox'),
-        trashMailEventBtn = document.querySelector('#trash');
-		
-		
+        trashMailEventBtn = document.querySelector('#trash'),
+        composeMailEventBtn = document.querySelector('.compose'),
+        groupMailEventBtn = document.querySelector('#group');
+
 let naviFunction = (() => {
     let inboxEvent = () => {
     	console.log("Inbox Clicked");
         inbox.style.display = 'block';
         sentMail.style.display = 'none'; 
         draftMail.style.display = 'none';  
-        trashMail.style.display = 'none';                 
+        trashMail.style.display = 'none';  
+        composeMail.style.display = 'none'; 
+        groupMail.style.display = 'none';                         
     };  
 
     let sentMailEvent = () => {
@@ -22,7 +27,9 @@ let naviFunction = (() => {
 	    inbox.style.display = 'none';
         sentMail.style.display = 'block'; 
         draftMail.style.display = 'none';  
-        trashMail.style.display = 'none';            
+        trashMail.style.display = 'none';
+        composeMail.style.display = 'none';
+        groupMail.style.display = 'none';            
     };
 
     let draftMailEvent = () => {
@@ -30,7 +37,9 @@ let naviFunction = (() => {
 	    inbox.style.display = 'none';
         sentMail.style.display = 'none'; 
         draftMail.style.display = 'block';  
-        trashMail.style.display = 'none';            
+        trashMail.style.display = 'none'; 
+        composeMail.style.display = 'none'; 
+        groupMail.style.display = 'none';           
     };
 
     let trashMailEvent = () => {
@@ -38,7 +47,29 @@ let naviFunction = (() => {
 	    inbox.style.display = 'none';
         sentMail.style.display = 'none'; 
         draftMail.style.display = 'none';  
-        trashMail.style.display = 'block';            
+        trashMail.style.display = 'block';  
+        composeMail.style.display = 'none';
+        groupMail.style.display = 'none';           
+    };
+
+    let composeMailEvent = () => {
+    	console.log("Compose Btn Clicked");
+	    inbox.style.display = 'none';
+        sentMail.style.display = 'none'; 
+        draftMail.style.display = 'none';  
+        trashMail.style.display = 'none';
+        composeMail.style.display = 'block'; 
+        groupMail.style.display = 'none';            
+    };
+
+    let groupMailEvent = () => {
+        console.log("Group Btn Clicked");
+        inbox.style.display = 'none';
+        sentMail.style.display = 'none'; 
+        draftMail.style.display = 'none';  
+        trashMail.style.display = 'none';
+        composeMail.style.display = 'none';
+        groupMail.style.display = 'block';             
     };
 
     let activeTag = (event) => {
@@ -52,10 +83,12 @@ let naviFunction = (() => {
         sentMailEvent,
         draftMailEvent,
         trashMailEvent,
+        composeMailEvent,
+        groupMailEvent, 
         activeTag
     };
 
-})(inbox, sentMail, trashMail, sentMail);
+})();
 
 inboxEventBtn.addEventListener("click", (event) => {
 	event.preventDefault();
@@ -80,3 +113,16 @@ trashMailEventBtn.addEventListener("click", (event) => {
 	naviFunction.activeTag(event);
     naviFunction.trashMailEvent(); 
 });
+
+composeMailEventBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    // naviFunction.activeTag(event);
+    naviFunction.composeMailEvent(); 
+});
+
+groupMailEventBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    // naviFunction.activeTag(event);
+    naviFunction.groupMailEvent(); 
+});
+

@@ -19,7 +19,9 @@ body {
 .container-mail,
 .sent-mail-container,
 .draft-mail-container,
-.trash-mail-container {
+.trash-mail-container,
+.compose-mail-container,
+.group-mail-container {
     padding: 1rem 4rem; 
     margin: auto;
     overflow: hidden;
@@ -58,9 +60,11 @@ body {
 .container-mail.app,
 .sent-mail-container.app,
 .draft-mail-container.app,
-.trash-mail-container.app {
+.trash-mail-container.app,
+.compose-mail-container.app,
+.group-mail-container.app {
     position: relative;
-} 
+}
 
 .container-addUser {
     max-width: 60%;
@@ -187,12 +191,21 @@ input[name=search]:focus {
     right: 0.63rem;
 }
 .form-wrap {
-	margin: auto;
+    height: 100%;
+    margin: auto;
     background: #271c5d;
     color: #fff;
     padding: 1rem 3rem 3rem;
     box-shadow: 0 0.03rem 0.05rem rgba(0, 0, 0, .2);
     border-radius: 0.63rem;
+    
+}
+
+.compose-mail-container .form-wrap,
+.group-mail-container .form-wrap {
+    overflow: scroll;
+    margin-bottom: 100px;
+    margin-top: 15px;
 }
 
 .login-container,
@@ -236,6 +249,7 @@ label {
 	outline: none;
 	color: #fff;
 	font-size: 0.88rem;
+    overflow: auto;
 }
 
 #message, 
@@ -291,6 +305,20 @@ label {
     font-size: 18px;
     width: 100%;
     margin-bottom: 1.2rem;
+}
+
+.close {
+    color: #cc3300;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #a99567;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
