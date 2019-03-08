@@ -213,7 +213,7 @@
             </div>
         </div>
     </section>
-    <section class="sent-mail-container">
+    <section class="sent-mail-container" hidden>
         <div class="app">
             <div class="mail-container">
                 <label for="search">
@@ -243,7 +243,7 @@
             </div>
         </div>
     </section>
-    <section class="draft-mail-container">
+    <section class="draft-mail-container" hidden>
         <div class="app">
             <div class="mail-container">
                 <label for="search">
@@ -273,6 +273,37 @@
             </div>
         </div>
     </section>
+    <section class="trash-mail-container" hidden>
+        <div class="app">
+            <div class="mail-container">
+                <label for="search">
+                    <input name="search" placeholder="search" tabindex="0" role="search" aria-labelledby="search"/>
+                </label>
+
+                <div class="message"  tabindex="0">
+                    <input type="checkbox" />
+                    <span class="sender" >demo</span>
+                    <span class="date" >date</span>
+                    <span class="title" >received mail 1</span>
+                </div>
+
+                <div class="message"  tabindex="0">
+                    <input type="checkbox" />
+                    <span class="sender" >demo</span>
+                    <span class="date" >date</span>
+                    <span class="title">received mail 2</span>
+                </div>
+
+                <div class="message"  tabindex="0">
+                    <input type="checkbox" />
+                    <span class="sender" >demo</span>
+                    <span class="date" >date</span>
+                    <span class="title" >received mail 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/appUI.js"></script>
 </body>
 
 </html>
