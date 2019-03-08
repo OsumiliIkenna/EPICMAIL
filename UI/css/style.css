@@ -16,18 +16,13 @@ body {
 
 .container,
 .container-addUser,
-.container-mail {
+.container-mail,
+.sent-mail-container {
     padding: 1rem 4rem; 
     margin: auto;
     overflow: hidden;
     margin-top: 150px; 
 }
-
-/* .container-mail {
-    transform: translate(0%, 0%);
-    padding: 1rem;
-    margin-top: 150px;
-}  */
 
 .container-header {
     overflow: hidden;
@@ -58,7 +53,8 @@ body {
     border-radius: 5px;
 }
 
-.container-mail.app {
+.container-mail.app,
+.sent-mail-container.app {
     position: relative;
 } 
 
