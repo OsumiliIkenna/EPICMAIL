@@ -17,13 +17,13 @@
         <ul>
             <li><a class="compose" href="composemail.html" tabindex="0" role="compose" aria-labelledby="Compose">Compose</a></li>
             <li>
-                <a class="active" href="#inbox" tabindex="0">Inbox</a>
+                <a class="active" id="inbox" href="#inbox" tabindex="0" role="button">Inbox</a>
             </li>
-            <li><a href="#starred" tabindex="0">Starred</a></li>
-            <li><a href="#sent" tabindex="0">Sent</a></li>
-            <li><a href="#draft" tabindex="0">Draft</a></li>
-            <li><a href="#trash" tabindex="0">Trash</a></li>
-            <li><a href="#groups" tabindex="0">Groups</a></li>
+            <li><a href="#starred" id="starred" tabindex="0" role="button">Starred</a></li>
+            <li><a href="#sent-mail" id="sent" tabindex="0" role="button">Sent</a></li>
+            <li><a href="#draft" id="draft" tabindex="0" role="button">Draft</a></li>
+            <li><a href="#trash" id="trash" tabindex="0" role="button">Trash</a></li>
+            <li><a href="#groups" id="group" tabindex="0" role="button">Groups</a></li>
         </ul>
     </div>
     <section class="container-mail">
@@ -213,7 +213,7 @@
             </div>
         </div>
     </section>
-    <section class="sent-mail-container" hidden>
+    <section class="sent-mail-container" id="sent-mail" hidden>
         <div class="app">
             <div class="mail-container">
                 <label for="search">
@@ -224,21 +224,21 @@
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 1</span>
+                    <span class="title" >sent mail 1</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title">received mail 2</span>
+                    <span class="title">sent mail 2</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 3</span>
+                    <span class="title" >sent mail 3</span>
                 </div>
             </div>
         </div>
@@ -254,21 +254,21 @@
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 1</span>
+                    <span class="title" >draft mail 1</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title">received mail 2</span>
+                    <span class="title">draft mail 2</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 3</span>
+                    <span class="title" >draft mail 3</span>
                 </div>
             </div>
         </div>
@@ -284,26 +284,26 @@
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 1</span>
+                    <span class="title" >trash mail 1</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title">received mail 2</span>
+                    <span class="title">trash mail 2</span>
                 </div>
 
                 <div class="message"  tabindex="0">
                     <input type="checkbox" />
                     <span class="sender" >demo</span>
                     <span class="date" >date</span>
-                    <span class="title" >received mail 3</span>
+                    <span class="title" >trash mail 3</span>
                 </div>
             </div>
         </div>
     </section>
-    <script src="js/appUI.js"></script>
+    <script src="../js/appUI.js"></script>
 </body>
 
 </html>
