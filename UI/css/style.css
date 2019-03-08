@@ -17,7 +17,8 @@ body {
 .container,
 .container-addUser,
 .container-mail,
-.sent-mail-container {
+.sent-mail-container,
+.draft-mail-container {
     padding: 1rem 4rem; 
     margin: auto;
     overflow: hidden;
@@ -54,7 +55,8 @@ body {
 }
 
 .container-mail.app,
-.sent-mail-container.app {
+.sent-mail-container.app,
+.draft-mail-container.app {
     position: relative;
 } 
 
