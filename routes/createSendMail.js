@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
 
 	const message = {
 		data: [{
-		id: messages.length + 1,,
+		id: messages.length + 1,
 		createdOn: req.body.createdOn,
 		subject: req.body.subject,
 		message: req.body.message,
