@@ -1,0 +1,6 @@
+{
+	"name": "Epic Mail App - Development",
+	"mail": {
+		"host": "dev-epic-mail-server"
+	}
+}
