@@ -1,3 +1,4 @@
+import { express } from 'express';
 import { mocha } from 'mocha';
 import { chai } from 'chai';
 import { Joi } from 'joi';
@@ -9,8 +10,7 @@ import { emails } from './routes/emails';
 import { myEmail } from './routes/myEmail';
 import { deleteEmail } from './routes/deleteEmail';
 import { signup } from './routes/signup';
-import { login } from './routes/login';
-import { express } from 'express';
+// import { login } from './routes/login';
 
 // Set up the express app
 const app = express();

@@ -12,7 +12,7 @@ const messages = {
 		senderId: 1,
 		receiverId: 1,
 		parentMessageId: 1,
-		status: 'unread',
+		status: 'unread'
 	}]
 };
 
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
 
 	const message = {
 		data: [{
-		id: messages.length + 1,,
+		id: messages.length + 1,
 		createdOn: req.body.createdOn,
 		subject: req.body.subject,
 		message: req.body.message,
@@ -54,7 +54,6 @@ const validateMessage = (message) => {
 	};
 
 	return Joi.validate(message, schema);
-}
+};
 
 module.exports = router;
-
