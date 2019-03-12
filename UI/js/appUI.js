@@ -4,6 +4,7 @@ let inbox = document.querySelector('.container-mail'),
         trashMail = document.querySelector('.trash-mail-container'),
         composeMail = document.querySelector('.compose-mail-container'),
         groupMail = document.querySelector('.group-mail-container'),
+        message = document.querySelectorAll('.message'),
         // loginMail = document.querySelector('.login-container'),
 		sentMailEventBtn = document.querySelector('#sent'),
         draftMailEventBtn = document.querySelector('#draft'),
@@ -12,8 +13,19 @@ let inbox = document.querySelector('.container-mail'),
         composeMailEventBtn = document.querySelector('.compose'),
         groupMailEventBtn = document.querySelector('#group');
         // loginMailEventBtn = document.querySelector('#btn');
+        // checkbox = document.querySelector("input[type=checkbox]");
 
 let naviFunction = (() => {
+
+    let messageEvent = () => {
+        console.log("Messages Clicked");
+        inbox.style.display = 'none';
+        sentMail.style.display = 'none'; 
+        draftMail.style.display = 'none';  
+        trashMail.style.display = 'none';  
+        composeMail.style.display = 'block'; 
+        groupMail.style.display = 'none';                        
+    };  
 
     let inboxEvent = () => {
     	console.log("Inbox Clicked");
@@ -99,7 +111,8 @@ let naviFunction = (() => {
         composeMailEvent,
         groupMailEvent,
         loginMailEvent, 
-        activeTag
+        activeTag,
+        messageEvent
     };
 
 })();
@@ -136,8 +149,26 @@ composeMailEventBtn.addEventListener("click", (event) => {
 
 groupMailEventBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    // naviFunction.activeTag(event);
+    naviFunction.activeTag(event);
     naviFunction.groupMailEvent(); 
 });
+
+message.forEach((element) => {
+    element.addEventListener("click", (event) => {
+    console.log(event.target);
+    event.preventDefault(); 
+    // naviFunction.activeTag(event);
+    naviFunction.messageEvent();
+    
+    });
+});
+
+document.querySelector('.closebtn').addEventListener('click', (event) => {
+    document.querySelector(".navBar").style.width = "250px";
+    document.querySelector(".navBar").style.width = "0";
+});
+
+
+
 
 
