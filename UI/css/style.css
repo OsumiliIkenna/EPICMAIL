@@ -50,7 +50,9 @@ body {
     text-align: center;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.13rem;
-    background: #271c5d;
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     border-bottom: 0.25rem solid #64a5b7;
     border-radius: 5px;
 }
@@ -85,8 +87,12 @@ body {
     width: 75%;
     overflow: auto;
     margin-left: 21%;
-    padding: 1px 25px;
+    padding: 1px 20px;
     left: 10px;
+}
+
+.navBar{
+    margin-top: 95px;
 }
 
 .navBar ul {
@@ -191,12 +197,12 @@ input[name=search]:focus {
 .form-wrap {
     height: 100%;
     margin: auto;
-    background: #271c5d;
-    color: #fff;
+    background: rgba(255,255,255,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: #271c5d;
     padding: 1rem 3rem 3rem;
-    box-shadow: 0 0.03rem 0.05rem rgba(0, 0, 0, .2);
     border-radius: 0.63rem;
-    
 }
 
 .compose-mail-container .form-wrap,
@@ -208,8 +214,10 @@ input[name=search]:focus {
 
 .login-container,
 .signup-container {
-	background: #271c5d;
-    color: #fff;
+	background: rgba(255,255,255,.1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    color: #271c5d;
     width: 35%;
     top: 50%;
     left: 50%;
@@ -217,7 +225,6 @@ input[name=search]:focus {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 1.25rem 1.88rem;
-    box-shadow: 0 0.03rem 0.05rem rgba(0, 0, 0, .2);
     border-radius: 5px;
 }
 
@@ -242,10 +249,10 @@ label {
 	margin-bottom: 0.63rem;
 	height: 30px;
 	border: none;
-	border-bottom: 1px solid #fff;
+	border-bottom: 0.9px solid #271c5d;
 	background: transparent;
 	outline: none;
-	color: #fff;
+	color: #271c5d;
 	font-size: 0.88rem;
     overflow: auto;
 }
@@ -396,14 +403,70 @@ label {
     cursor: pointer;
 }
 
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 @media screen and (min-width: 768px) {
 	.container {
 		max-width: 55%;
     	height: 55%;
 	}
+
+    .navBar ul{
+        width: 20%;
+    }
+
+    .navBar li a.compose {
+        width: 90%;
+    }
+
 }
 
 @media screen and (min-width: 481px) and (max-width: 767px) {
+    .navBar ul{
+        display:  none;
+    }
+
+    .mail-container {
+        
+        margin-left: 0% !important;
+        
+    }
+
+    #sidenav {padding-top: 15px;}
+    #sidenav a {font-size: 18px;}
+
   	.login-container {
     	width: 85%;
   	}
@@ -442,12 +505,27 @@ label {
 	.message .date {
 	    right: 0.13rem;
 	}
-	li a.compose {
-		width: 90%;
-	}
+	.navBar ul{
+        width: 30%;
+    }
+
+    .navBar li a.compose {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .navBar ul{
+        display:  none;
+    }
+
+    .mail-container {
+        margin-left: 0% !important;  
+    }
+
+    #sidenav {padding-top: 15px;}
+    #sidenav a {font-size: 18px;}
+
   	.login-container {
 	    width: 80%;
   	}
@@ -489,9 +567,13 @@ label {
 	    right: 0.13rem;
 	}
 
-	li a.compose {
-		width: 90%;
-	}
+	.navBar ul{
+        width: 30%;
+    }
+
+    .navBar li a.compose {
+        width: 90%;
+    }
 }
  
 
