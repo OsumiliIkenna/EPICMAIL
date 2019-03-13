@@ -5,15 +5,12 @@ let inbox = document.querySelector('.container-mail'),
         composeMail = document.querySelector('.compose-mail-container'),
         groupMail = document.querySelector('.group-mail-container'),
         message = document.querySelectorAll('.message'),
-        // loginMail = document.querySelector('.login-container'),
 		sentMailEventBtn = document.querySelector('#sent'),
         draftMailEventBtn = document.querySelector('#draft'),
 		inboxEventBtn = document.querySelector('#inbox'),
         trashMailEventBtn = document.querySelector('#trash'),
         composeMailEventBtn = document.querySelector('.compose'),
         groupMailEventBtn = document.querySelector('#group');
-        // loginMailEventBtn = document.querySelector('#btn');
-        // checkbox = document.querySelector("input[type=checkbox]");
 
 let naviFunction = (() => {
 
@@ -163,10 +160,6 @@ message.forEach((element) => {
     });
 });
 
-document.querySelector('.closebtn').addEventListener('click', (event) => {
-    document.querySelector(".navBar").style.width = "250px";
-    document.querySelector(".navBar").style.width = "0";
-});
 
 
 

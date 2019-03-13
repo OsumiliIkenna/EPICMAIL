@@ -14,12 +14,27 @@
     <div class="container-header">
         <span class="title" tabindex="0" role="title" aria-labelledby="title">EPIC Mail</span>
     </div>
-    <div class="navBar" id="sidenav">
+    <div class="navBar">
         <ul>
-            <a href="#" class="closebtn">&times;</a>
             <li><a class="compose" href="#composemail.html" tabindex="0" role="compose" aria-labelledby="Compose">Compose</a></li>
             <li>
                 <a class="active" id="inbox" href="#inbox" tabindex="0" role="button">Inbox</a>
+            </li>
+            <li><a href="#sent-mail" id="sent" tabindex="0" role="button">Sent</a></li>
+            <li><a href="#draft" id="draft" tabindex="0" role="button">Draft</a></li>
+            <li><a href="#trash" id="trash" tabindex="0" role="button">Trash</a></li>
+            <li><a href="#groups" id="group" tabindex="0" role="button">Groups</a></li>
+        </ul>
+    </div>
+    <div id="sidebar">
+        <input type="checkbox"/>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <li><a class="compose" href="#composemail.html" tabindex="0" role="compose" aria-labelledby="Compose">Compose</a></li>
+            <li>
+              <a class="active" id="inbox" href="#inbox" tabindex="0" role="button">Inbox</a>
             </li>
             <li><a href="#sent-mail" id="sent" tabindex="0" role="button">Sent</a></li>
             <li><a href="#draft" id="draft" tabindex="0" role="button">Draft</a></li>
